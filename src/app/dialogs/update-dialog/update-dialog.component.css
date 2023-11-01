@@ -1,0 +1,17 @@
+/* .updateform{
+
+} */
+.myinput{
+    display: flex;
+    flex-direction: column;
+    margin: 20px; 
+}
+
+.updatecontracttitle{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.actionbutton{
+    margin-left: 20px;
+}

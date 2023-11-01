@@ -1,0 +1,26 @@
+.actionbutton{
+  margin-right: 20px;
+  width: 100px;
+}
+
+.contractCard{
+    min-width: 800px;
+}
+
+.mainContract{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.myinput{
+    display: flex;
+    flex-direction: column;
+    margin: 10px; 
+}
+
+@media (max-width: 900px) {
+    .contractCard{
+        min-width: 400px;
+    }
+    
+}

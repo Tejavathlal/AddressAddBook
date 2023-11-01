@@ -1,12 +1,7 @@
 
-<div class="mainContract">
-<h1>New Contract</h1>
-
-<div class="contractCard">
-    <form [formGroup]="contractForm" (ngSubmit)="onSubmit()" class="myform">
-<mat-card>
-    <mat-card-content>
-       
+<div class="updateform">
+    <h1 class="updatecontracttitle">Update Contract</h1>
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="myform">
 
             <div class="myinput">
             <mat-form-field class="example-full-width">
@@ -29,13 +24,9 @@
                 <input matInput placeholder="Address" formControlName="address">
               </mat-form-field>
             </div>
-    </mat-card-content>
+    
+      <button class="actionbutton" type="button" mat-raised-button mat-dialog-close color="warn">Cancel</button>
+      <button  class="actionbutton" [disabled]="updateForm.invalid" type="submit" mat-raised-button color="primary">Update</button>
 
-    <mat-card-actions align="end">
-      <button class="actionbutton" (click)="onCancel()" type="button" mat-raised-button color="warn">Cancel</button>
-      <button  class="actionbutton" [disabled]="contractForm.invalid" type="submit" mat-raised-button color="primary">Create</button>
-    </mat-card-actions>
-  </mat-card>
 </form>
-</div>
 </div>

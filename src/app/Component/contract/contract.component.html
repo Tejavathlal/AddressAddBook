@@ -1,1 +1,48 @@
 <h1>Contract</h1>
+
+
+<table mat-table [dataSource]="dataSource">
+
+    <!-- <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let contract"> {{contract.id}} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="FirstName">
+        <th mat-header-cell *matHeaderCellDef> FirstName </th>
+        <td mat-cell *matCellDef="let contract"> {{contract.FirstName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="LastName">
+        <th mat-header-cell *matHeaderCellDef> LastName </th>
+        <td mat-cell *matCellDef="let contract"> {{contract.LastName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="PhoneNumber">
+        <th mat-header-cell *matHeaderCellDef> PhoneNumber </th>
+        <td mat-cell *matCellDef="let contract"> {{contract.PhoneNumber}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Address">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef="let contract"> {{contract.Address}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Update">
+        <th mat-header-cell *matHeaderCellDef> Update </th>
+        <td mat-cell *matCellDef="let contract">
+            <button mat-raised-button color="primary" (click)="onUpdate(contract)">Update</button>
+             </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Delete">
+        <th mat-header-cell *matHeaderCellDef> Delete </th>
+        <td mat-cell *matCellDef="let contract">
+            <button mat-raised-button color="warn" (click)="onDelete(contract)">Delete</button>
+             </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</table>

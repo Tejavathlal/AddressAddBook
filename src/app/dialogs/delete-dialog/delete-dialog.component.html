@@ -1,0 +1,33 @@
+
+
+<div class="updateform">
+    <h1 class="updatecontracttitle">Delete Contract</h1>
+    <form [formGroup]="deleteForm" (ngSubmit)="onSubmit()" class="myform">
+
+            <div class="myinput">
+            <mat-form-field class="example-full-width">
+              <mat-label class="forminput">FirstName</mat-label>
+              <input  class="forminput"  matInput  placeholder="First Name" formControlName="firstName">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label  class="forminput">LastName</mat-label>
+                <input  class="forminput" matInput   placeholder="Last Name" formControlName="lastName">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label  class="forminput">PhoneNumber</mat-label>
+                <input  class="forminput" matInput  placeholder="Phone Number" formControlName="phoneNumber">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label  class="forminput">Address</mat-label>
+                <input class="forminput" matInput   placeholder="Address" formControlName="address">
+              </mat-form-field>
+            </div>
+    
+      <button class="actionbutton" type="button" mat-raised-button mat-dialog-close color="warn">Cancel</button>
+      <button  class="actionbutton"  type="submit" mat-raised-button color="accent">Delete</button>
+
+</form>
+</div>
